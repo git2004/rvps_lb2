@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Образование вторичных ресурсов</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input {
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Образование вторичных ресурсов</h1>
+
+    <form>
+        <label for="resource-name">Наименование ресурса:</label>
+        <input type="text" id="resource-name" name="resource-name" placeholder="Введите наименование ресурса">
+
+        <label for="resource-volume">Объем ресурса:</label>
+        <input type="text" id="resource-volume" name="resource-volume" placeholder="Введите объем ресурса">
+
+        <label for="collection-place">Место сбора:</label>
+        <input type="text" id="collection-place" name="collection-place" placeholder="Введите место сбора">
+
+        <label for="hazard-class">Класс опасности:</label>
+        <input type="text" id="hazard-class" name="hazard-class" placeholder="Введите класс опасности">
+
+        <button type="submit">Отправить</button>
+    </form>
+
+    <footer>
+        ОАО "ТрансОйл"<br>
+        Служба технической поддержки +7 (929) 721-35-97
+    </footer>
+
+</body>
+</html>

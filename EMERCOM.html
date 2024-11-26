@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мероприятия по ликвидации ЧС</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Мероприятия по ликвидации ЧС</h1>
+    <p>
+        Законодательством Российской Федерации закреплены следующие основные положения в области мероприятий по ликвидации ЧС на объекте ТЭК:
+    </p>
+    <ul>
+        <li>Сбор, обработка и обмен информацией в области защиты населения и территорий от чрезвычайных ситуаций и обеспечения пожарной безопасности в ТЭК.</li>
+        <li>Разработка и реализация целевых и научно-технических программ и мер по предупреждению чрезвычайных ситуаций и обеспечению пожарной безопасности в ТЭК.</li>
+        <li>Мониторинг опасных природных явлений и техногенных процессов, способных привести к возникновению чрезвычайных ситуаций на объектах ТЭК, и оценка их возможных социально-экономических последствий.</li>
+        <li>Планирование действий органов управления и сил функциональной подсистемы, организация подготовки и обеспечения их деятельности.</li>
+        <li>Руководство созданием, размещением, хранением и восполнением резервов материальных ресурсов для ликвидации чрезвычайных ситуаций в ТЭК.</li>
+    </ul>
+
+    <button onclick="callFireBrigade()">Вызов пожарной бригады</button>
+
+    <footer>
+        ОАО "ТрансОйл"<br>
+        Служба технической поддержки +7 (929) 721-35-97
+    </footer>
+
+    <script>
+        function callFireBrigade() {
+            alert("Пожарная бригада вызвана!");
+        }
+    </script>
+
+</body>
+</html>
