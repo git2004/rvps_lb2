@@ -13,23 +13,30 @@
         h1 {
             text-align: center;
         }
-        p, table {
+        .section {
             margin: 20px 0;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        .field {
+            margin-bottom: 10px;
         }
-        table, th, td {
-            border: 1px solid black;
+        .field label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
         }
-        th, td {
-            padding: 10px;
-            text-align: left;
+        .field input, .field textarea {
+            width: calc(100% - 12px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
         }
         button {
             display: block;
-            margin: 0 auto 20px;
+            margin: 20px auto;
             padding: 10px 20px;
             font-size: 16px;
             background-color: #ff4c4c;
@@ -38,56 +45,144 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        button:hover {
+         button:hover {
             background-color: #cc0000;
         }
+       
     </style>
 </head>
 <body>
 
     <h1>Отчет по реализации нефтепродукта: Бензин АИ-92</h1>
-    <button onclick="closeReport()">Закрыть отчет</button>
 
-    <h2>1. Общая информация</h2>
-    <p>
-        <strong>Тип нефтепродукта:</strong> Бензин АИ-92<br>
-        <strong>Период реализации:</strong> 01.10.2024 – 31.10.2024<br>
-        <strong>Общий объем поставок:</strong> 1,500 тонн<br>
-        <strong>Количество заказчиков:</strong> 5
-    </p>
+    <div class="section">
+        <h2>1. Общая информация</h2>
+        <div class="field">
+            <label for="productType">Тип нефтепродукта:</label>
+            <input type="text" id="productType" value="Бензин АИ-92">
+        </div>
+        <div class="field">
+            <label for="period">Период реализации:</label>
+            <input type="text" id="period" placeholder="01.10.2024 – 31.10.2024">
+        </div>
+        <div class="field">
+            <label for="totalVolume">Общий объем поставок:</label>
+            <input type="text" id="totalVolume" placeholder="1,500 тонн">
+        </div>
+        <div class="field">
+            <label for="customerCount">Количество заказчиков:</label>
+            <input type="number" id="customerCount" placeholder="5">
+        </div>
+    </div>
 
-    <h2>2. Финансовые показатели</h2>
-    <p>
-        <strong>Общий доход:</strong> 27,000,000 руб.<br>
-        <strong>Средняя цена реализации:</strong> 18,000 руб./тонна<br>
-        <strong>Финансовая рентабельность:</strong> 15%<br>
-        <strong>Чистая прибыль:</strong> 4,050,000 руб.
-    </p>
+    <div class="section">
+        <h2>2. Финансовые показатели</h2>
+        <div class="field">
+            <label for="totalRevenue">Общий доход:</label>
+            <input type="text" id="totalRevenue" placeholder="27,000,000 руб.">
+        </div>
+        <div class="field">
+            <label for="averagePrice">Средняя цена реализации:</label>
+            <input type="text" id="averagePrice" placeholder="18,000 руб./тонна">
+        </div>
+         <div class="field">
+            <label for="profitability">Финансовая рентабельность:</label>
+            <input type="text" id="profitability" placeholder="15%">
+        </div>
+         <div class="field">
+            <label for="netProfit">Чистая прибыль:</label>
+            <input type="text" id="netProfit" placeholder="4,050,000 руб.">
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>3. Логистические данные</h2>
+        <div class="field">
+            <label for="shipmentCount">Количество отгрузок:</label>
+            <input type="number" id="shipmentCount" placeholder="12">
+        </div>
+         <div class="field">
+            <label for="averageDeliveryTime">Среднее время доставки:</label>
+            <input type="text" id="averageDeliveryTime" placeholder="3 дня">
+        </div>
+        <div class="field">
+            <label for="transportCount">Количество задействованных транспортных средств:</label>
+            <input type="number" id="transportCount" placeholder="8">
+        </div>
+    </div>
 
-    <h2>3. Логистические данные</h2>
-    <p>
-        <strong>Количество отгрузок:</strong> 12<br>
-        <strong>Среднее время доставки:</strong> 3 дня<br>
-        <strong>Количество задействованных транспортных средств:</strong> 8
-    </p>
+    <div class="section">
+        <h2>4. Основные результаты</h2>
+        <div class="field">
+            <label for="contractCompliance">Своевременность выполнения контрактов:</label>
+             <input type="text" id="contractCompliance" placeholder="100%">
+        </div>
+        <div class="field">
+            <label for="complaints">Рекламации от заказчиков:</label>
+             <input type="text" id="complaints" placeholder="Отсутствуют">
+        </div>
+         <div class="field">
+            <label for="reducedTransportCosts">Снижение транспортных расходов:</label>
+             <input type="text" id="reducedTransportCosts" placeholder="на 8% по сравнению с прошлым месяцем">
+        </div>
+        <div class="field">
+            <label for="increasedRevenue">Увеличение доходов:</label>
+             <input type="text" id="increasedRevenue" placeholder="+12% по сравнению с аналогичным периодом прошлого года">
+        </div>
+    </div>
 
-    <h2>4. Основные результаты</h2>
-    <p>
-        <strong>Своевременность выполнения контрактов:</strong> 100%<br>
-        <strong>Рекламации от заказчиков:</strong> Отсутствуют<br>
-        <strong>Снижение транспортных расходов:</strong> на 8% по сравнению с прошлым месяцем<br>
-        <strong>Увеличение доходов:</strong> +12% по сравнению с аналогичным периодом прошлого года
-    </p>
-
-    <h2>5. Рекомендации и выводы</h2>
-    <p>
-        - Увеличить объемы поставок для ключевых заказчиков.<br>
-        - Оптимизировать логистику для сокращения времени доставки.<br>
-        - Рассмотреть скидки на объемные заказы для привлечения новых клиентов.
-    </p>
+     <div class="section">
+        <h2>5. Рекомендации и выводы</h2>
+        <div class="field">
+            <label for="recommendations">Рекомендации и выводы:</label>
+            <textarea id="recommendations" rows="4" placeholder="Увеличить объемы поставок для ключевых заказчиков. Оптимизировать логистику для сокращения времени доставки. Рассмотреть скидки на объемные заказы для привлечения новых клиентов."></textarea>
+        </div>
+    </div>
+    
+    <button onclick="saveReport()">Сохранить отчет</button>
+     <button onclick="closeReport()">Закрыть отчет</button>
 
     <script>
-        function closeReport() {
+        function saveReport() {
+             const reportContent = `
+Отчет по реализации нефтепродукта: Бензин АИ-92
+
+1. Общая информация
+    Тип нефтепродукта: ${document.getElementById('productType').value}
+    Период реализации: ${document.getElementById('period').value}
+    Общий объем поставок: ${document.getElementById('totalVolume').value}
+    Количество заказчиков: ${document.getElementById('customerCount').value}
+
+2. Финансовые показатели
+    Общий доход: ${document.getElementById('totalRevenue').value}
+    Средняя цена реализации: ${document.getElementById('averagePrice').value}
+    Финансовая рентабельность: ${document.getElementById('profitability').value}
+    Чистая прибыль: ${document.getElementById('netProfit').value}
+
+3. Логистические данные
+    Количество отгрузок: ${document.getElementById('shipmentCount').value}
+    Среднее время доставки: ${document.getElementById('averageDeliveryTime').value}
+    Количество задействованных транспортных средств: ${document.getElementById('transportCount').value}
+ 
+4. Основные результаты
+    Своевременность выполнения контрактов: ${document.getElementById('contractCompliance').value}
+    Рекламации от заказчиков: ${document.getElementById('complaints').value}
+    Снижение транспортных расходов: ${document.getElementById('reducedTransportCosts').value}
+    Увеличение доходов: ${document.getElementById('increasedRevenue').value}
+ 
+5. Рекомендации и выводы
+    ${document.getElementById('recommendations').value}
+`;
+
+            const blob = new Blob([reportContent], { type: 'text/plain' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'report.txt';
+            link.click();
+        }
+
+
+      function closeReport() {
             alert("Отчет закрыт!");
             window.close();
         }
